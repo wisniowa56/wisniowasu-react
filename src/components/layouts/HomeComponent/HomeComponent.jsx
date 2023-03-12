@@ -91,7 +91,7 @@ export class HomeComponent extends React.Component
             } 
             else {
                 if (body.classList.contains('nav-bg')) {
-                body.classList.remove('nav-bg');
+                    body.classList.remove('nav-bg');
                 }
             }
         });
@@ -132,7 +132,7 @@ export class HomeComponent extends React.Component
                     <div id='team_image_container'>
                         <div id="moving_gradient"></div>
                         <div id='team_image' data-href={this.state.main_image} className="progressive replace">
-                            <img src={this.state.main_image} alt="Zespół" className="preview" />
+                            <img src={this.state.main_image} alt="Zespół" className="team_image_l" />
                         </div>
                     </div>
                 </div>

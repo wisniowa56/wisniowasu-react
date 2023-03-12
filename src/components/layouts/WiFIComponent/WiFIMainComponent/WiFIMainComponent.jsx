@@ -124,13 +124,6 @@ export class WiFIMainComponent extends React.Component
                         // loaded: true,
                         error: false,
                     });
-                    
-                    if(this.state.loaded && !this.state.error) 
-                    {   
-                        this.count();
-                        
-                        this.interval = setInterval(() => {this.count()}, 1000);
-                    }
                 }
             ).catch(e => this.setState({error: e}))
         ).catch(e => this.setState({error:e}))
@@ -139,6 +132,11 @@ export class WiFIMainComponent extends React.Component
 
     componentDidUpdate()
     {
+        if(this.state.loaded && !this.state.error) 
+        {   
+            this.count();            
+            this.interval = setInterval(() => {this.count()}, 1000);
+        }
         slide();
     }
 

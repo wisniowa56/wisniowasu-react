@@ -1,5 +1,6 @@
 import React from "react";
 import VanillaTilt from 'vanilla-tilt';
+import { ImageLoader, getThumbURL } from '../../reusables/ImageLoader/ImageLoader'
 
 export class TeamPersonComponent extends React.Component
 {
@@ -40,7 +41,7 @@ export class TeamPersonComponent extends React.Component
     {
         return(
             <div className={`human-card slideable ${this.state.active ? 'disp open' : ''}`} onClick={this.toggle} onMouseLeave={() => {this.setState({active:false})}} ref={node => {this.root = node}} data-tilt>
-                <img className="personimg" src={this.props.photo} />
+                <ImageLoader className="personimg" src={this.props.photo} thumb={getThumbURL(this.props.photo)}/>
                 <div className="info">
                     <img src={this.props.icon} />
                     <div className="box">

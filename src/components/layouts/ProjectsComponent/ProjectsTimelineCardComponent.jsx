@@ -1,4 +1,5 @@
 import React from "react";
+import { ImageLoader, getThumbURL } from '../../reusables/ImageLoader/ImageLoader'
 
 export class ProjectsTimelineCardComponent extends React.Component
 {
@@ -44,7 +45,7 @@ export class ProjectsTimelineCardComponent extends React.Component
                 </div>
                 <div className={`container ${this.state.active ? 'open' : ''}`}>
                     <div className="img_container" onClick={this.toggle}>
-                        <img src={this.props.img}/>
+                        <ImageLoader src={this.props.img} thumb={getThumbURL(this.props.img)}/>
                     </div>
                     <div className="title">
                         {this.props.title}

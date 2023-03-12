@@ -18,14 +18,18 @@
       "image content"
       "caption content";
   }
-
-  &__image {
-    background-size: cover;
+  .image-loader {
     grid-area: image;
     width: 100%;
-    height: 100%;
     background-position-y: var(--offset-y, 100%);
+    height: 100%;
+  }
 
+  .image-loader img {
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     @media (min-width: 600px) {
       height: 300px;
 

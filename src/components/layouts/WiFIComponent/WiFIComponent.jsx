@@ -48,11 +48,6 @@ export class WiFIComponent extends React.Component
         if(!this.state.loaded) return (<Loading />)
         return(
             <div id="wifi">
-                <div className="title_box">
-                    <h1 className="title_box_text">
-                        Wiśniowy Festiwal Inicjatyw
-                    </h1>
-                </div>
                 <Routes>
                     <Route key={65535} exact path="/*" element={<WiFIYearComponent year={this.state.years.reduce((l,r) => l > r ? l : r)}/>}/>
                     {this.state.years.map(i => 

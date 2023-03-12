@@ -6,14 +6,17 @@ import { WiFIDetailsComponent } from './WiFIDetailsComponent/WiFIDetailsComponen
 import { WiFIScheduleComponent } from './WiFIScheduleComponent/WiFIScheduleComponent';
 import { WiFIContactComponent } from './WiFIContactComponent/WiFIContactComponent';
 
-import { withRouter } from 'react-router-dom';
-
 export class WiFIYearComponent extends React.Component
 {
     render()
     {
         return(
             <div id="wifi-year">
+                <div className="title_box">
+                    <h1 className="title_box_text">
+                        WiFI {this.props.year}
+                    </h1>
+                </div>
                 <WiFIMenuComponent year={this.props.year}/>
                 <Routes>
                     <Route exact path="/" element={<WiFIMainComponent year={this.props.year} key={1}/>}/>

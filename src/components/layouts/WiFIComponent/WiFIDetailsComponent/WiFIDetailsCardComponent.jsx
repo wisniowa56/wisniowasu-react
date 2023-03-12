@@ -1,4 +1,5 @@
 import React from "react";
+import { ImageLoader, getThumbURL } from '../../../reusables/ImageLoader/ImageLoader'
 
 export class WiFIDetailsCardComponent extends React.Component
 {
@@ -7,7 +8,7 @@ export class WiFIDetailsCardComponent extends React.Component
         return(
             <section className="info-card slideable">
                 <div className="info-card__image rounded">
-                    <img className="info-card-image" src={this.props.img}/>
+                    <ImageLoader className="info-card-image" src={this.props.img} thumb={getThumbURL(this.props.img)}/>
                 </div>
                 <p className="info-card__image-caption">
                     {this.props.caption}<br/>
