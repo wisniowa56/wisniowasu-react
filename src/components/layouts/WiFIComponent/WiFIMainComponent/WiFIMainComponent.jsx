@@ -77,7 +77,7 @@ export class WiFIMainComponent extends React.Component
     componentDidMount()
     {
         fetch(`${cms}/api/wifis?` + new URLSearchParams({
-            'filter[year][$eq]': `${this.props.year}`,
+            'filters[year][$eq]': `${this.props.year}`,
             'populate[0]': 'wifi_main',
             'populate[1]': 'wifi_main.logo',
             'populate[2]': 'wifi_main.date',

@@ -44,7 +44,7 @@ export class ProjectsTimelineCardComponent extends React.Component
                 </div>
                 <div className={`container ${this.state.active ? 'open' : ''}`}>
                     <div className="img_container" onClick={this.toggle}>
-                        <img src={this.props.img} />
+                        <img src={this.props.img}/>
                     </div>
                     <div className="title">
                         {this.props.title}

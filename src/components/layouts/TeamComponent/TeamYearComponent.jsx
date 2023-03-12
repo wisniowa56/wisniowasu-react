@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { TeamPersonComponent } from './TeamPersonComponent';
 import Loading from "../../reusables/LoadingComponent/Loading";
 import Error from "../../reusables/ErrorComponent/Error";

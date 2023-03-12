@@ -54,9 +54,9 @@ export class WiFIComponent extends React.Component
                     </h1>
                 </div>
                 <Routes>
-                    <Route path="/*" element={<WiFIYearComponent year={this.state.years.reduce((l,r) => l > r ? l : r)}/>}/>
+                    <Route key={65535} exact path="/*" element={<WiFIYearComponent year={this.state.years.reduce((l,r) => l > r ? l : r)}/>}/>
                     {this.state.years.map(i => 
-                        <Route key={i} path={`${i}/*`} element={<WiFIYearComponent year={i}/>}/>    
+                        <Route key={i} exact path={`${i}/*`} element={<WiFIYearComponent year={i}/>}/>    
                     )}
                 </Routes>
                 <WiFIYearPickerComponent years={this.state.years}/>

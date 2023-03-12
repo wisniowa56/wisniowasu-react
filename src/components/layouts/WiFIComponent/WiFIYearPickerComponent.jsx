@@ -10,7 +10,7 @@ export class WiFIYearPickerComponent extends React.Component
                 <button className="teampicker_dropdown_button">Zobacz poprzednie edycje WiFI</button>
                 <div className="teampicker_dropdown_content">
                     {this.props.years.map((i) =>
-                        {return (<option key={i}><Link to={`${i}`}>{`${i}`}</Link></option>)}
+                        {return (<div key={i}><a href={`/wifi/${i}`}>{`${i}`}</a></div>)}
                     )}
                 </div>
             </div>

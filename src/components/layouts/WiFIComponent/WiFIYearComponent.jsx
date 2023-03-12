@@ -6,6 +6,8 @@ import { WiFIDetailsComponent } from './WiFIDetailsComponent/WiFIDetailsComponen
 import { WiFIScheduleComponent } from './WiFIScheduleComponent/WiFIScheduleComponent';
 import { WiFIContactComponent } from './WiFIContactComponent/WiFIContactComponent';
 
+import { withRouter } from 'react-router-dom';
+
 export class WiFIYearComponent extends React.Component
 {
     render()
@@ -14,10 +16,10 @@ export class WiFIYearComponent extends React.Component
             <div id="wifi-year">
                 <WiFIMenuComponent year={this.props.year}/>
                 <Routes>
-                    <Route path="/" element={<WiFIMainComponent year={this.props.year}/>}/>
-                    <Route path="details" element={<WiFIDetailsComponent year={this.props.year}/>}/>
-                    <Route path="schedule" element={<WiFIScheduleComponent year={this.props.year}/>}/>
-                    <Route path="contact" element={<WiFIContactComponent year={this.props.year}/>}/>
+                    <Route exact path="/" element={<WiFIMainComponent year={this.props.year} key={1}/>}/>
+                    <Route exact path="details" element={<WiFIDetailsComponent year={this.props.year} key={2}/>}/>
+                    <Route exact path="schedule" element={<WiFIScheduleComponent year={this.props.year}/>} key={3}/>
+                    <Route exact path="contact" element={<WiFIContactComponent year={this.props.year}/>} key={4}/>
                 </Routes>
             </div>
         );

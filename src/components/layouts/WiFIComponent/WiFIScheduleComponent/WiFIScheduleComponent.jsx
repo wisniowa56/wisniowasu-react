@@ -29,7 +29,7 @@ export class WiFIScheduleComponent extends React.Component
     componentDidMount()
     {
         fetch(`${cms}/api/wifis?` + new URLSearchParams({
-            'filter[year][$eq]': `${this.props.year}`,
+            'filters[year][$eq]': `${this.props.year}`,
             'populate[0]': 'wifi_schedule',
             'populate[1]': 'wifi_schedule.entries',
             'populate[2]': 'wifi_schedule.entries.sections'

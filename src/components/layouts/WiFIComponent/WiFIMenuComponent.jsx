@@ -9,7 +9,7 @@ export class WiFIMenuComponent extends React.Component
     {
         return(
             <div className="wifi-header">
-                <Link className="wifi-header__home-button" to=''></Link>
+                <Link className="wifi-header__home-button" to='.'></Link>
                     <span className="vertical-spacer"></span>
                     <Link className="wifi-header__button" to='details'>Szczegóły wydarzenia</Link>
                     <span className="vertical-spacer"></span>

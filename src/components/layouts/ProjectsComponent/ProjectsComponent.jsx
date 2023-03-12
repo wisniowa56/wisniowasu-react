@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { ProjectsTimelineCardComponent } from './ProjectsTimelineCardComponent'
 import Loading from '../../reusables/LoadingComponent/Loading';
 import Error from '../../reusables/ErrorComponent/Error';
@@ -65,9 +65,9 @@ export class ProjectsComponent extends React.Component
                     <div id="timeline_line"></div>
                     <div id="timeline_container">
                         <div className="timeline_card" ref={node => {this.cards = node}}>
-                            {this.state.cards.map((value, index) => 
-                                    <ProjectsTimelineCardComponent key={index} date={value.date} img={value.img} title={value.title} text={value.text} /> 
-                            )}
+                                {this.state.cards.map((value, index) => 
+                                        <ProjectsTimelineCardComponent key={index} date={value.date} img={value.img} title={value.title} text={value.text} /> 
+                                )}
                         </div>
                     </div>
                 </div>

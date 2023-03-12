@@ -24,7 +24,7 @@ export class WiFIDetailsComponent extends React.Component
     componentDidMount()
     {
         fetch(`${cms}/api/wifis?` + new URLSearchParams({
-            'filter[year][$eq]': `${this.props.year}`,
+            'filters[year][$eq]': `${this.props.year}`,
             'populate[0]': 'wifi_detail',
             'populate[1]': 'wifi_detail.cards',
             'populate[2]': 'wifi_detail.cards.photo',
