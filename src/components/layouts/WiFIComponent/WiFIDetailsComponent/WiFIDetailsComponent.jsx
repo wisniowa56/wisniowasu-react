@@ -37,7 +37,8 @@ export class WiFIDetailsComponent extends React.Component
                                 img: `${cms}${v.photo.data[0].attributes.url}`,
                                 caption: v.caption,
                                 title: v.title,
-                                text: v.text
+                                text: v.text,
+                                align: v.align
                             }
                         }),
                         // loaded: true,
@@ -66,7 +67,7 @@ export class WiFIDetailsComponent extends React.Component
                 </div>
                 <div ref={node => {this.content = node}}>
                     {this.state.cards.map((value, key) =>
-                        <WiFIDetailsCardComponent key={key} img={value.img} caption={value.caption} title={value.title} text={value.text}/>
+                        <WiFIDetailsCardComponent key={key} img={value.img} caption={value.caption} title={value.title} text={value.text} align={value.align}/>
                     )}
                 </div>
             </div>

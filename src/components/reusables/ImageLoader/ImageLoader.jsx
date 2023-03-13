@@ -39,8 +39,9 @@ export class ImageLoader extends React.Component
     {
         return(
             <div className="image-loader">
-                <img className={this.state.loaded ? 'collapsed' : ''} ref={node => { this.thumb = node}} src={this.props.thumb} alt={this.props.alt ? this.props.alt : ''}/>
-                <img className={!this.state.loaded ? 'collapsed' : ''} ref={node => {this.img = node}} src={this.props.src} onLoad={() => {this.imgLoaded()}} alt={this.props.alt ? this.props.alt : ''}/>
+                <img style={this.props.style} className={`image-loader-thumbnail ${this.state.loaded ? 'collapsed' : ''}`} ref={node => { this.thumb = node}} src={this.props.thumb} alt={this.props.alt ? this.props.alt : ''}/>
+                <img style={this.props.style} className={`${!this.state.loaded ? 'collapsed' : ''}`} ref={node => {this.img = node}} src={this.props.src} onLoad={() => {this.imgLoaded()}} alt={this.props.alt ? this.props.alt : ''}/>
+                <div className={`image-loader-circle ${this.state.loaded ? 'collapsed' : ''}`}></div>
             </div>
         );
     }
