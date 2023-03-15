@@ -9,8 +9,8 @@ import Loading from '../../reusables/LoadingComponent/Loading';
 import Error from '../../reusables/ErrorComponent/Error';
 
 import { cms } from '../../../CMS';
-
 import { slide } from '../../../slide'
+import { ImageLoader, getThumbURL } from '../../reusables/ImageLoader/ImageLoader'
 
 
 export class HomeComponent extends React.Component
@@ -132,7 +132,7 @@ export class HomeComponent extends React.Component
                     <div id='team_image_container'>
                         <div id="moving_gradient"></div>
                         <div id='team_image' data-href={this.state.main_image} className="progressive replace">
-                            <img src={this.state.main_image} alt="Zespół" className="team_image_l" />
+                            <img src={this.state.main_image} thumb={getThumbURL(this.state.main_image)} alt="Zespół" />
                         </div>
                     </div>
                 </div>
@@ -142,7 +142,7 @@ export class HomeComponent extends React.Component
                 <div className="pageblock-full">
                     <div className="card slideable">
                         <div className="card-image">
-                            <img src={this.state.description_image}/>
+                            <ImageLoader src={this.state.description_image} thumb={getThumbURL(this.state.description_image)}/>
                         </div>
                         <h2 className="card-title">
                             O nas

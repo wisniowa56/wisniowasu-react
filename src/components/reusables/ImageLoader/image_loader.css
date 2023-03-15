@@ -19,6 +19,7 @@
     width: 100px;
     height: 100px;
     animation: spin 1s infinite ease-in-out;
+    border: 4px solid #ffebee;
     border-top: 4px solid #F04D56;
     border-bottom: 4px solid #F04D56;
     border-radius: 50%;
