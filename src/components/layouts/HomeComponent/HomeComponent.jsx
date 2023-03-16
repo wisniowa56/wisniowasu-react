@@ -132,7 +132,7 @@ export class HomeComponent extends React.Component
                     <div id='team_image_container'>
                         <div id="moving_gradient"></div>
                         <div id='team_image' data-href={this.state.main_image} className="progressive replace">
-                            <img src={this.state.main_image} thumb={getThumbURL(this.state.main_image)} alt="Zespół" />
+                            <img src={this.state.main_image} alt="Zespół" />
                         </div>
                     </div>
                 </div>
