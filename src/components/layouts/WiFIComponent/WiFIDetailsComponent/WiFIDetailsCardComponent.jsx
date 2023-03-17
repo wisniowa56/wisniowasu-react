@@ -9,7 +9,7 @@ export class WiFIDetailsCardComponent extends React.Component
             <section className="info-card slideable">
                 <div className="info-card__image rounded">
                     <ImageLoader className="info-card-image" style={{
-                        'object-position': this.props.align == 'bottom'? 'bottom': this.props.align == 'top'? 'top' : ''
+                        objectPosition: this.props.align == 'bottom'? 'bottom': this.props.align == 'top'? 'top' : ''
                     }} src={this.props.img} thumb={getThumbURL(this.props.img)}/>
                 </div>
                 <p className="info-card__image-caption">

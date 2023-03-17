@@ -8,7 +8,7 @@ export class DocumentsComponent extends React.Component
             <div className="documents">
                 <div className="title_box">
                     <h1 className="title_box_text">
-                        W PRZYGOTOWANIU...
+                        DOKUMENTY
                     </h1>
                 </div>
             </div>

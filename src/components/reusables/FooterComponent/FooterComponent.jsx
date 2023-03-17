@@ -19,7 +19,7 @@ export class FooterComponent extends React.Component   // DOKUMENTACJA
                 </div>
                 <p>Made by <a target="_blank" href="https://github.com/DvEyZ">Szymon Kwiręg</a> & <a href="https://github.com/resultfulness">Alicja Rosiak</a> | Source code on <a target="_blank" href="https://github.com/DvEyZ/homepage-wisniowasu">GitHub</a></p>
                 <p>Ikony wykorzystane z <a target="_blank" rel="noopener" href="https://icons8.com">Icons8</a></p>
-                <p>wersja 2.1.0</p>
+                <p>wersja 2.1.1</p>
             </footer>
         );
     }

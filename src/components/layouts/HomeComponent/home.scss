@@ -123,7 +123,6 @@ html {
   @include shadow("nonclikable");
   background-color: white;
   width: 260px;
-  height: 420px;
   padding: 20px;
   margin: 20px;
   border-radius: 40px;
@@ -133,10 +132,7 @@ html {
   justify-content: center;
   align-content: stretch;
   align-items: center;
-
-  &.short {
-    height: 320px;
-  }
+  align-self: stretch;
 
   &-icon {
     margin-top: 5px;

@@ -170,14 +170,17 @@ export class WiFIMainComponent extends React.Component
                         )}
                     </div>
                 </div>
-                <div className="section_topic">Sponsorzy</div>
+                { this.state.sponsors.length > 0 ?
+                <div className="section_topic">Sponsorzy</div> : null}
                 <div className="sponsors" ref={node => {this.sponsors_container = node}}>
                     {this.state.sponsors.map((value, key) => 
                         <WiFISponsorComponent key={key} img={value.img} alt={value.alt} link={value.link} /> 
                     )}
                 </div>
                 <p className="sponsors__disclaimer">{this.state.sponsors_disclaimer}</p>
-                <div className="section_topic">Partnerzy</div>
+                { this.state.partners.length > 0 ?
+                <div className="section_topic">Partnerzy</div> : null
+                }
                 <div className="pageblock-full" ref={node => {this.partners_container = node}} style={{'flexFlow': 'row wrap', 'alignItems': 'stretch'}}>
                     {this.state.partners.map((value, key) =>
                         <WiFIPartnerComponent key={key} img={value.img} alt={value.alt} title={value.title} content={value.content} 
