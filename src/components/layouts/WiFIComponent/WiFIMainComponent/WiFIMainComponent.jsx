@@ -30,6 +30,11 @@ export class WiFIMainComponent extends React.Component
 
     count = () => 
     {
+        if(!this.countdown)
+        {
+            clearInterval(this.interval);
+            return;
+        }
         var updatedText = 'Czas do wydarzenia: ';
         var currentDate = new Date().getTime();
 

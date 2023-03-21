@@ -15,6 +15,8 @@ import { TeamComponent } from './components/layouts/TeamComponent/TeamComponent'
 import { WiFIComponent } from './components/layouts/WiFIComponent/WiFIComponent';
 import { DocumentsComponent } from './components/layouts/DocumentsComponent/DocumentsComponent';
 
+export const title = 'Wiśniowa SU - Samorząd Uczniowski'
+
 const App = () =>
 {
     return (
@@ -58,7 +60,5 @@ window.addEventListener('scroll', () => {
         }
     }
 })
-
-export const title = 'Wiśniowa SU - Samorząd Uczniowski'
 
 document.title = title
