@@ -17,7 +17,8 @@ export class FooterComponent extends React.Component   // DOKUMENTACJA
                     <a className="discord" title="Discord WiśniowaSU" href="https://discord.wisniowasu.pl" target="_blank"></a>
                     <a className="status" title="Status usług WiśniowaSU" href="https://status.wisniowasu.pl" target="_blank"></a>
                 </div>
-                <p>Made by <a target="_blank" href="https://github.com/DvEyZ">Szymon Kwiręg</a> & <a href="https://github.com/resultfulness">Alicja Rosiak</a> & <a href="https://github.com/fastfend">Piotr Stadnicki</a> | Source code on <a target="_blank" href="https://github.com/DvEyZ/wisniowasu-react">GitHub</a></p>
+                <p>Made by <a target="_blank" href="https://github.com/DvEyZ">Szymon Kwiręg</a> & <a href="https://github.com/resultfulness">Alicja Rosiak</a> | Source code on <a target="_blank" href="https://github.com/DvEyZ/wisniowasu-react">GitHub</a></p>
+                <p>Original design by <a href="https://github.com/fastfend">Piotr Stadnicki</a></p>
                 <p>Ikony wykorzystane z <a target="_blank" rel="noopener" href="https://icons8.com">Icons8</a></p>
                 <p>wersja 2.2.0</p>
             </footer>
