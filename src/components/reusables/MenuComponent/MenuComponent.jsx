@@ -56,6 +56,8 @@ export class MenuComponent extends React.Component // DOKUMENTACJA
                                     główna</a></li>
                             <li className={`nav__list-item`}><a href="/team/"
                                     className="hover-target">Zespół</a></li>
+                            <li className={`nav__list-item`}><a href="/merch/"
+                                    className="hover-target">Merch</a></li>
                             <li className={`nav__list-item`}><a href="/projects/"
                                     className="hover-target">Projekty</a></li>
                             <li className={`nav__list-item`}><a href="/forstudent/"
