@@ -24,15 +24,15 @@ export class ProjectsComponent extends React.Component
 
     componentDidMount()
     {
-        fetch(`${cms}/api/projects?` + new URLSearchParams({'populate[0]':'projects', 'populate[1]':'projects.image'})).then(
+        fetch(`${cms}/api/project?` + new URLSearchParams({'populate[0]':'projects', 'populate[1]':'projects.image'})).then(
             res => {res.json().then(
                 value => {
                     this.setState({
-                        cards: value.data.attributes.projects.map((v) => {
+                        cards: value.data.projects.map((v) => {
                             return {
                                 title: v.title,
                                 date: v.date,
-                                img: `${cms}${v.image.data.attributes.url}`,
+                                img: `${cms}${v.image.url}`,
                                 text: v.text,
                             }
                         }),

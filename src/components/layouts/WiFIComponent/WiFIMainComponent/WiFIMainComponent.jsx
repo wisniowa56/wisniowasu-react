@@ -95,25 +95,25 @@ export class WiFIMainComponent extends React.Component
             value.json().then(
                 value => {
                     this.setState({
-                        logo: `${cms}${value.data[0].attributes.wifi_main.data.attributes.logo.data.attributes.url}`,
-                        logo_alt: value.data[0].attributes.wifi_main.data.attributes.logo.data.attributes.alternativeText,
-                        date: new Date(value.data[0].attributes.wifi_main.data.attributes.date),
-                        description: value.data[0].attributes.wifi_main.data.attributes.description,
-                        video_link: value.data[0].attributes.wifi_main.data.attributes.video_link,
-                        about: value.data[0].attributes.wifi_main.data.attributes.about.map(v => {
+                        logo: `${cms}${value.data[0].wifi_main.data.logo.url}`,
+                        logo_alt: value.data[0].wifi_main.data.logo.alternativeText,
+                        date: new Date(value.data[0].wifi_main.data.date),
+                        description: value.data[0].wifi_main.data.description,
+                        video_link: value.data[0].wifi_main.data.video_link,
+                        about: value.data[0].wifi_main.data.about.map(v => {
                             return {
                                 title: v.title,
                                 text: v.text
                             }
                         }),
-                        sponsors: value.data[0].attributes.wifi_main.data.attributes.sponsors.map(v => {
+                        sponsors: value.data[0].wifi_main.data.sponsors.map(v => {
                             return {
                                 link: v.link,
-                                img: `${cms}${v.img.data.attributes.url}`,
-                                alt: v.img.data.attributes.alternativeText
+                                img: `${cms}${v.img.url}`,
+                                alt: v.img.alternativeText
                             }
                         }),
-                        partners: value.data[0].attributes.wifi_main.data.attributes.partners.map(v => {
+                        partners: value.data[0].wifi_main.data.partners.map(v => {
                             return {
                                 title: v.title,
                                 content: v.content,
@@ -122,8 +122,8 @@ export class WiFIMainComponent extends React.Component
                                 discord: v.discord,
                                 instagram: v.instagram,
                                 youtube: v.youtube,
-                                img: `${cms}${v.logo.data.attributes.url}`,
-                                alt: v.logo.data.attributes.alternativeText
+                                img: `${cms}${v.logo.url}`,
+                                alt: v.logo.alternativeText
                             }
                         }),
                         // loaded: true,

@@ -27,7 +27,7 @@ export class DocumentsComponent extends React.Component
     componentDidMount() {
         document.title = `Dokumenty | ${title}`;
 
-        fetch(`${cms}/api/document?` + new URLSearchParams({
+        fetch(`${cms}/api/documents?` + new URLSearchParams({
             'populate[0]':'documents', 
             'populate[1]':'documents.file', 
             'populate[2]':'documents.thumb'
@@ -35,11 +35,11 @@ export class DocumentsComponent extends React.Component
             res => {res.json().then(
                 value => {
                     this.setState({
-                        cards: value.data.attributes.documents.map((v) => {
+                        cards: value.data.documents.map((v) => {
                             return {
                                 name: v.name,
-                                link: `${cms}${v.file.data.attributes.url}`,
-                                preview: `${cms}${v.thumb.data.attributes.url}`,
+                                link: `${cms}${v.file.url}`,
+                                preview: `${cms}${v.thumb.url}`,
                                 important: v.important
                             }
                         }),

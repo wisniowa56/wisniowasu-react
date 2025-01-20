@@ -21,11 +21,11 @@ export class MerchComponent extends React.Component {
 
     componentDidMount() {
         document.title = `Merch | ${title}`;
-        fetch(`${cms}/api/merch?populate=deep,product.img`).then(value =>
+        fetch(`${cms}/api/merch?` + new URLSearchParams({'populate[0]':'products', 'populate[1]':'products.img'})).then(value =>
             value.json().then(
                 value => {
                     this.setState({
-                        merch: value.data.attributes.product,
+                        merch: value.data.products,
                         loaded: true,
                         error: false,
                     });
@@ -36,7 +36,7 @@ export class MerchComponent extends React.Component {
     }
 
     render() {
-        if (this.state.error) return <Error message={this.state.error} />;
+        if (this.state.error) return <Error message={this.state.error.toString()} />;
         if (!this.state.loaded) return <Loading />;
         return (
             <div className="merch">
@@ -49,13 +49,12 @@ export class MerchComponent extends React.Component {
                     <div className="product-card-container">
                         {this.state.merch.map((item, index) => (
                             <MerchCardComponent
-                                key={index}
                                 name={item.name}
                                 desc={item.description}
                                 colors={item.colors}
                                 sizes={item.sizes}
                                 price={item.price}
-                                img={item.img.data.map((image) => `${cms}${image.attributes.url}`)}
+                                img={item.img.map((image) => `${cms}${image.url}`)}
                             />
                         ))}
                     </div>

@@ -37,7 +37,7 @@ export class WiFIScheduleComponent extends React.Component
             value.json().then(
                 value => {
                     this.setState({
-                        entries: value.data[0].attributes.wifi_schedule.data.attributes.entries.map((v) => {
+                        entries: value.data[0].wifi_schedule.data.entries.map((v) => {
                             return {
                                 hour: v.hour,
                                 title: v.title,

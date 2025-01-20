@@ -30,8 +30,8 @@ export class ContactComponent extends React.Component
             res => {res.json().then(
                 value => {
                     this.setState({
-                        admin_name: value.data.attributes.admin_name,
-                        admin_email: value.data.attributes.admin_email,
+                        admin_name: value.data.admin_name,
+                        admin_email: value.data.admin_email,
                         // loaded: true,
                         error: false
                     });

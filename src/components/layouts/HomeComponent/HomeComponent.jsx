@@ -47,28 +47,28 @@ export class HomeComponent extends React.Component
             res => {res.json().then(
                 value => {
                     this.setState({
-                        main_image: `${cms}${value.data.attributes.main_image.data.attributes.url}`,
-                        description_image: `${cms}${value.data.attributes.description_image.data.attributes.url}`,
-                        description: value.data.attributes.description,
-                        values: value.data.attributes.values.map((v) => {
+                        main_image: `${cms}${value.data.main_image.url}`,
+                        description_image: `${cms}${value.data.description_image.url}`,
+                        description: value.data.description,
+                        values: value.data.values.map((v) => {
                             return {
-                                img:`${cms}${v.image.data.attributes.url}`,
-                                alt: v.image.data.attributes.alternativeText,
+                                img:`${cms}${v.image.url}`,
+                                alt: v.image.alternativeText,
                                 title: v.title,
                                 text: v.text
                             }
                         }),
-                        sections: value.data.attributes.sections.map((v) => {
+                        sections: value.data.sections.map((v) => {
                             return {
-                                img:`${cms}${v.image.data.attributes.url}`,
-                                alt: v.image.data.attributes.alternativeText,
+                                img:`${cms}${v.image.url}`,
+                                alt: v.image.alternativeText,
                                 title: v.title,
                                 text: v.text
                             }
                         }),
-                        buttons: value.data.attributes.buttons.map((v) => {
+                        buttons: value.data.buttons.map((v) => {
                             return {
-                                img:`${cms}${v.image.data.attributes.url}`,
+                                img:`${cms}${v.image.url}`,
                                 button_text: v.text,
                                 href: v.href
                             }

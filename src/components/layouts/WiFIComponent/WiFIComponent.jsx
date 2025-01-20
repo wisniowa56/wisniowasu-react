@@ -29,7 +29,7 @@ export class WiFIComponent extends React.Component
                 value => {
                     this.setState({
                         years: value.data.map((v) => {
-                                return v.attributes.year;
+                                return v.year;
                             }),
                         // loaded: true,
                         error: false,

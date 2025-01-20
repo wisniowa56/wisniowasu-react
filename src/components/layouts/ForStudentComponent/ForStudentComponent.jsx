@@ -31,12 +31,12 @@ export class ForStudentComponent extends React.Component
             res => {res.json().then(
                 value => {
                     this.setState({
-                        cards: value.data.attributes.cards.map((v) => {
+                        cards: value.data.cards.map((v) => {
                             return {
                                 name: v.title,
                                 description: v.description,
                                 link: v.link,
-                                img: `${cms}${v.image.data.attributes.url}`,
+                                img: `${cms}${v.image.url}`,
                             }
                         }),
                         // loaded: true,

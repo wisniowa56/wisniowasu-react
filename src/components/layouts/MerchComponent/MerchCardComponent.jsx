@@ -31,16 +31,14 @@ export class MerchCardComponent extends React.Component
                                 </tr>
                             </thead>
                             <tbody>
-                                {this.props.sizes[1].map((sizeObj, index) =>
-                                    Object.entries(sizeObj).map(([size, dimensions]) => (
-                                        <tr>
-                                            <td><b>{size}</b></td>
-                                            {dimensions.map((d) => (
-                                                <td>{d} cm</td>
-                                            ))}
-                                        </tr>
-                                    ))
-                                )}
+                                {this.props.sizes[1].map(([size, ...dimensions]) => (
+                                    <tr>
+                                        <td><b>{size}</b></td>
+                                        {dimensions.map((dimension) => (
+                                            <td>{dimension} cm</td>
+                                        ))}
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     )}

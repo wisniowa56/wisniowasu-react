@@ -36,19 +36,19 @@ export class TeamYearComponent extends React.Component
             value.json().then(
                 value => {
                     this.setState({
-                        management: value.data[0].attributes.management.map(v => {
+                        management: value.data[0].management.map(v => {
                             return {
-                                photo: `${cms}${v.photo.data.attributes.url}`,
-                                icon: `${cms}${v.icon.data.attributes.url}`,
+                                photo: `${cms}${v.photo.url}`,
+                                icon: `${cms}${v.icon.url}`,
                                 name: v.name,
                                 role: v.role,
                                 text: v.text
                             }
                         }),
-                        sections: value.data[0].attributes.sections.map(v => {
+                        sections: value.data[0].sections.map(v => {
                             return {
-                                photo: `${cms}${v.photo.data.attributes.url}`,
-                                icon: `${cms}${v.icon.data.attributes.url}`,
+                                photo: `${cms}${v.photo.url}`,
+                                icon: `${cms}${v.icon.url}`,
                                 name: v.name,
                                 role: v.role,
                                 text: v.text
