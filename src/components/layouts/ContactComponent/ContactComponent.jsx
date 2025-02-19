@@ -66,7 +66,7 @@ export class ContactComponent extends React.Component
                                 <p className="title">Napisz maila</p>
                                 <br/>
                                 <p className="subtitle">Kontakowy adres mailowy SU</p>
-                                <a href="mailto:su@tm1.edu.pl">kontakt@wisniowasu.pl</a>
+                                <a href="mailto:samorzad@tm1.edu.pl">samorzad@tm1.edu.pl</a>
                                 <br/><br/>
                                 <p className="subtitle">Administrator IT</p>
                                 {this.state.admin_name}

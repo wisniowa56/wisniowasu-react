@@ -15,6 +15,8 @@ import { TeamComponent } from './components/layouts/TeamComponent/TeamComponent'
 import { WiFIComponent } from './components/layouts/WiFIComponent/WiFIComponent';
 import { DocumentsComponent } from './components/layouts/DocumentsComponent/DocumentsComponent';
 import { MerchComponent } from "./components/layouts/MerchComponent/MerchComponent";
+import { WorldsContestComponent } from './components/layouts/WorldsContestComponent/WorldsContestComponent';
+
 
 export const title = 'Wiśniowa SU - Samorząd Uczniowski'
 
@@ -32,6 +34,7 @@ const App = () =>
                 <Route path="/wifi/*" element={<WiFIComponent/>}/>
                 <Route path="/documents/*" element={<DocumentsComponent/>}/>
                 <Route path="/contact" element={<ContactComponent/>}/>
+                <Route path="/worlds/*" element={<WorldsContestComponent/>}/>
             </Routes>
             <FooterComponent/>
         </div>

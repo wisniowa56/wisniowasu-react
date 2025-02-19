@@ -1,0 +1,63 @@
+@import "../../../../shadows.scss";
+
+$colour1: #ff7f66;
+$colour2: #de1444;
+
+#worlds_description {
+  width: 600px;
+  height: auto;
+  margin-bottom: -40px;
+}
+
+#worlds_description_title {
+  font-size: 28px;
+}
+
+.minicard {
+  @include shadow("nonclikable");
+  background-color: white;
+  width: 280px;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  align-self: stretch;
+
+  &-icon {
+    margin-top: 5px;
+    height: 100px;
+  }
+
+  &-title {
+    font-family: "Raleway", sans-serif;
+    margin: 20px 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &-text {
+    font-size: 14px;
+
+    text-align: justify;
+    margin: 0 auto auto auto;
+
+    ol, ul {
+      padding-left: 10px;
+    }
+  }
+
+  @media (max-width: 696px) {
+    height: unset;
+  }
+}
+
+#worlds_note {
+  width: 600px;
+}
