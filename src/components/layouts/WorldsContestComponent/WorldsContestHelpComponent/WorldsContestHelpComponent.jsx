@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {slide} from '../../../../slide'
-import './help.scss';
 import {title} from "../../../../index";
 import {cms} from "../../../../CMS";
 import Error from "../../../reusables/ErrorComponent/Error";
@@ -44,7 +43,7 @@ export class WorldsContestHelpComponent extends React.Component
         return(
             <div>
                 <h2 className="section_topic alt-mobile-anim">Często zadawane pytania</h2>
-                <section className="card slideable">
+                <section className="contact-card slideable">
                     {this.state.faq.map((faq, index) => {
                         return (
                             <div key={index}>
@@ -58,14 +57,14 @@ export class WorldsContestHelpComponent extends React.Component
                     })}
                 </section>
                 <h2 className="section_topic alt-mobile-anim">Inne pytania? Napisz do nas</h2>
-                <section className="card slideable">
-                    <h2 className="card__title">Twojego pytania nie ma na liście?</h2>
-                    <p className="card__content">Nie wiesz co zrobić? Jeśli nie znalazłeś odpowiedzi na nurtujące Cię pytania wpadnij na długiej przerwie do pokoju Samorządu (23) albo napisz na adres <a href="mailto:samorzad@tm1.edu.pl">samorzad@tm1.edu.pl</a>.
+                <section className="contact-card slideable">
+                    <h2 className="contact-card__title">Twojego pytania nie ma na liście?</h2>
+                    <p className="contact-card__content">Nie wiesz co zrobić? Jeśli nie znalazłeś odpowiedzi na nurtujące Cię pytania wpadnij na długiej przerwie do pokoju Samorządu (23) albo napisz na adres <a href="mailto:samorzad@tm1.edu.pl">samorzad@tm1.edu.pl</a>.
                     </p>
-                    <div className="card__social">
-                        <a href="https://instagram.wisniowasu.pl" title="Nasz Instagram" className="card__social__instagram"></a>
-                        <a href="https://facebook.wisniowasu.pl" title="Nasz Facebook" className="card__social__facebook"></a>
-                        <a href="https://youtube.wisniowasu.pl" title="Nasz YouTube" className="card__social__youtube"></a>
+                    <div className="contact-card__social">
+                        <a href="https://instagram.wisniowasu.pl" title="Nasz Instagram" className="contact-card__social__instagram"></a>
+                        <a href="https://facebook.wisniowasu.pl" title="Nasz Facebook" className="contact-card__social__facebook"></a>
+                        <a href="https://youtube.wisniowasu.pl" title="Nasz YouTube" className="contact-card__social__youtube"></a>
                     </div>
                 </section>
             </div>
