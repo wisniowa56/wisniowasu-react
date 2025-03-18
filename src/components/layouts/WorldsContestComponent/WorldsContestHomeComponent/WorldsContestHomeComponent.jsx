@@ -111,12 +111,12 @@ export class WorldsContestHomeComponent extends React.Component {
                     this.countdown = node
                 }}></div>
                 <div className="pageblock-full" id="description-container">
-                    <div className="minicard slideable" id="worlds_description">
-                        <img className="minicard-icon lazyload" id="worlds-logo" alt="Logo WORLDS" src={this.state.logo}/>
-                        <div className="minicard-title" id="worlds_description_title">
+                    <div className="worlds-minicard slideable" id="worlds_description">
+                        <img className="worlds-minicard-icon lazyload" id="worlds-logo" alt="Logo WORLDS" src={this.state.logo}/>
+                        <div className="worlds-minicard-title" id="worlds_description_title">
                             Wiśniowy Oryginalny Ranking Legendarnych Dzieł Satyrycznych
                         </div>
-                        <div className="minicard-text">
+                        <div className="worlds-minicard-text">
                             <p>{this.state.description}</p>
                         </div>
                     </div>
@@ -126,11 +126,11 @@ export class WorldsContestHomeComponent extends React.Component {
                     <div className="cardgroup" id="instructions-container" ref={node => {
                         this.about_container = node
                     }}>
-                        <div className="minicard slideable">
-                            <div className="minicard-title">
+                        <div className="worlds-minicard slideable">
+                            <div className="worlds-minicard-title">
                                 Jak dołączyć?
                             </div>
-                            <div className="minicard-text">
+                            <div className="worlds-minicard-text">
                                 <ol>
                                     {this.state.instructions.map((instruction, index) => {
                                         return <li key={index}>{instruction}</li>
@@ -138,11 +138,11 @@ export class WorldsContestHomeComponent extends React.Component {
                                 </ol>
                             </div>
                         </div>
-                        <div className="minicard slideable">
-                            <div className="minicard-title">
+                        <div className="worlds-minicard slideable">
+                            <div className="worlds-minicard-title">
                                 Zasady
                             </div>
-                            <div className="minicard-text">
+                            <div className="worlds-minicard-text">
                                 <ul>
                                     {this.state.rules.map((rule, index) => {
                                         return <li key={index}>{rule}</li>
@@ -150,9 +150,9 @@ export class WorldsContestHomeComponent extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="minicard slideable" id="worlds_note">
-                            <div className="minicard-title">Dlaczego warto?</div>
-                            <div className="minicard-text">
+                        <div className="worlds-minicard slideable" id="worlds_note">
+                            <div className="worlds-minicard-title">Dlaczego warto?</div>
+                            <div className="worlds-minicard-text">
                                 <p>{this.state.note}</p>
                             </div>
                         </div>

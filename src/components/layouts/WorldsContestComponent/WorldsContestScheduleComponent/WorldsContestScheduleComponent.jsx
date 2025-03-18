@@ -43,13 +43,15 @@ export class WorldsContestScheduleComponent extends React.Component {
         return (
             <div className="worlds-contest-schedule">
                 <h2 className="section_topic alt-mobile-anim">Harmonogram</h2>
-                <div className="card slideable">
-                    <div className="card__content">
-                        <ul>
-                            {this.state.schedule.map((date, index) => {
-                                return <li key={index}>{date}</li>
-                            })}
-                        </ul>
+                <div className="pageblock-full">
+                    <div className="worlds-minicard slideable" style={{width: "unset"}}>
+                        <div className="worlds-minicard-text">
+                            <ul>
+                                {this.state.schedule.map((date, index) => {
+                                    return <li key={index}>{date}</li>
+                                })}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

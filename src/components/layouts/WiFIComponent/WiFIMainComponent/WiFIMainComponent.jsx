@@ -85,35 +85,34 @@ export class WiFIMainComponent extends React.Component
             'filters[year][$eq]': `${this.props.year}`,
             'populate[0]': 'wifi_main',
             'populate[1]': 'wifi_main.logo',
-            'populate[2]': 'wifi_main.date',
-            'populate[3]': 'wifi_main.about',
-            'populate[4]': 'wifi_main.partners',
-            'populate[5]': 'wifi_main.partners.logo',
-            'populate[6]': 'wifi_main.sponsors',
-            'populate[7]': 'wifi_main.sponsors.img'
+            'populate[2]': 'wifi_main.about',
+            'populate[3]': 'wifi_main.partners',
+            'populate[4]': 'wifi_main.partners.logo',
+            'populate[5]': 'wifi_main.sponsors',
+            'populate[6]': 'wifi_main.sponsors.img'
         })).then(value => 
             value.json().then(
                 value => {
                     this.setState({
-                        logo: `${cms}${value.data[0].wifi_main.data.logo.url}`,
-                        logo_alt: value.data[0].wifi_main.data.logo.alternativeText,
-                        date: new Date(value.data[0].wifi_main.data.date),
-                        description: value.data[0].wifi_main.data.description,
-                        video_link: value.data[0].wifi_main.data.video_link,
-                        about: value.data[0].wifi_main.data.about.map(v => {
+                        logo: `${cms}${value.data[0].wifi_main.logo.url}`,
+                        logo_alt: value.data[0].wifi_main.logo.alternativeText,
+                        date: new Date(value.data[0].wifi_main.date),
+                        description: value.data[0].wifi_main.description,
+                        video_link: value.data[0].wifi_main.video_link,
+                        about: value.data[0].wifi_main.about.map(v => {
                             return {
                                 title: v.title,
                                 text: v.text
                             }
                         }),
-                        sponsors: value.data[0].wifi_main.data.sponsors.map(v => {
+                        sponsors: value.data[0].wifi_main.sponsors.map(v => {
                             return {
                                 link: v.link,
                                 img: `${cms}${v.img.url}`,
                                 alt: v.img.alternativeText
                             }
                         }),
-                        partners: value.data[0].wifi_main.data.partners.map(v => {
+                        partners: value.data[0].wifi_main.partners.map(v => {
                             return {
                                 title: v.title,
                                 content: v.content,
@@ -157,16 +156,16 @@ export class WiFIMainComponent extends React.Component
         return(
             <div>
                 <div className="section_topic alt-mobile-anim" id="countdown" ref={node => {this.countdown = node}}></div>
-                    <div className="pageblock-full" id="description-container">
-                        <div className="minicard slideable" id="wifi_description">
-                            <img className="minicard-icon lazyload" id="wifi-logo" alt={this.state.logo_alt}
-                                src={this.state.logo} />
-                            <h3 className="minicard-title" id="wifi_description_title">Wiśniowy Festiwal Inicjatyw</h3>
-                            <h3 className="minicard-text">{this.state.description}
-                            </h3>
-                            {this.state.video_link ? <a href={this.state.video_link} className="gradient-button">Zobacz film promocyjny</a> : null}
-                        </div>
+                <div className="pageblock-full" id="description-container">
+                    <div className="minicard slideable" id="wifi_description">
+                        <img className="minicard-icon lazyload" id="wifi-logo" alt={this.state.logo_alt}
+                            src={this.state.logo} />
+                        <h3 className="minicard-title" id="wifi_description_title">Wiśniowy Festiwal Inicjatyw</h3>
+                        <h3 className="minicard-text">{this.state.description}
+                        </h3>
+                        {this.state.video_link ? <a href={this.state.video_link} className="gradient-button">Zobacz film promocyjny</a> : null}
                     </div>
+                </div>
                 <div className="section_topic">O WiFI</div>
                 <div className="pageblock-full">
                     <div className="cardgroup" id="about-container" ref={node => {this.about_container = node}}>

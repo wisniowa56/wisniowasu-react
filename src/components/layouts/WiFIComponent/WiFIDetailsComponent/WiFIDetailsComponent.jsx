@@ -32,9 +32,9 @@ export class WiFIDetailsComponent extends React.Component
             value.json().then(
                 value => {
                     this.setState({
-                        cards: value.data[0].wifi_detail.data.cards.map((v) => {
+                        cards: value.data[0].wifi_detail.cards.map((v) => {
                             return {
-                                img: v.photo.data.map((v) => `${cms}${v.url}`),
+                                img: v.photo.map((v) => `${cms}${v.url}`),
                                 caption: v.caption,
                                 title: v.title,
                                 text: v.text,
